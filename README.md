@@ -63,6 +63,6 @@ You can install these using pip:
 ```bash
 pip install numpy pandas matplotlib scipy statsmodels
 ```
-name :B Maruthi Kumar
-email: maruthikumarbandaru@gmail.com
-linkedin: linkedin.com/in/maruthi-kumar-328537258/
+Name :B Maruthi Kumar  
+email: maruthikumarbandaru@gmail.com  
+Linkedin: linkedin.com/in/maruthi-kumar-328537258/
