@@ -1,17 +1,68 @@
 # Statistical_Analysis
 
-## Introduction
-This analysis focuses on the statistical evaluation of a dataset containing medical costs based on factors such as age, sex, BMI (Body Mass Index), number of children, smoking habits, and associated charges. The primary goal of this study is to explore key descriptive statistics such as mean, median, mode, and standard deviation of the variables, followed by hypothesis testing and regression analysis to understand the relationship between BMI and medical charges. This report will provide insights into how BMI influences medical costs and how various statistical methods can be applied to real-world healthcare data.
+## Overview
+This project analyzes a dataset containing various factors such as age, sex, BMI (Body Mass Index), number of children, smoking status, and medical charges. The main goal is to explore the statistical relationships between these variables, with a particular focus on understanding how BMI affects medical costs.
 
-## Summary
-The dataset was first explored using basic descriptive statistics to understand the central tendencies and dispersion of the variables. Key findings include:
+The project utilizes Python libraries like **NumPy**, **Pandas**, **Matplotlib**, **SciPy**, and **StatsModels** to perform the analysis. Key statistical concepts such as descriptive statistics, hypothesis testing (t-tests), confidence intervals, and linear regression are employed to derive insights from the data.
 
-The average age in the dataset is 39 years, with the median also at 39 years.
-The BMI has a mean of 30.66, with a standard deviation of 6.1, indicating variability in the population's weight status.
-The majority of the population (approximately 80%) are non-smokers, which significantly affects medical costs.
-A one-sample t-test was conducted to test whether the average BMI significantly differs from a population mean of 0.05. The test produced a t-statistic of 183.63 and a p-value of 0, leading to the rejection of the null hypothesis. Additionally, a 95% confidence interval for the BMI was computed, ranging from 30.34 to 30.99.
+## Dataset
+The dataset used for this analysis contains the following columns:
+- **age**: Age of the individual
+- **sex**: Gender (1 for male, 0 for female)
+- **bmi**: Body Mass Index, a measure of body fat based on height and weight
+- **children**: Number of children covered by the health insurance
+- **smoker**: Whether the individual smokes (1 for yes, 0 for no)
+- **charges**: Medical charges billed to the individual
 
-Furthermore, a linear regression analysis was performed to determine the relationship between BMI and medical charges. The results showed a statistically significant positive relationship, with a p-value of less than 0.000, suggesting that higher BMI is associated with increased medical charges.
+The data is loaded from a CSV file called `medical_cost.csv`.
+
+## Statistical Concepts Used
+
+### 1. Descriptive Statistics
+Descriptive statistics provide insights into the distribution of the data. We compute the following for each variable:
+- **Mean**: Average value
+- **Median**: Middle value when sorted
+- **Mode**: Most frequent value
+- **Standard Deviation**: Measure of data spread
+- **Variance**: The square of standard deviation
+- **Skewness**: Measure of data asymmetry
+- **Kurtosis**: Measure of the 'tailedness' of data
+
+### 2. Hypothesis Testing (One-Sample t-test)
+A **one-sample t-test** was conducted to test if the mean BMI significantly differs from a population mean (0.05). The t-statistic and p-value are computed to assess statistical significance.
+
+### 3. Confidence Interval
+We calculate a 95% confidence interval for BMI to understand the range within which the true mean is expected to lie.
+
+### 4. Linear Regression
+A **linear regression** is performed to investigate the relationship between BMI (independent variable) and medical charges (dependent variable). This helps us quantify the impact of BMI on medical costs.
+
+#### Key Regression Output:
+- **R-squared**: Proportion of the variance in medical charges explained by BMI.
+- **Coefficient**: The estimated change in medical charges for a unit increase in BMI.
+- **P-value**: The statistical significance of the relationship.
+
+## Results Summary
+- **Descriptive Statistics**: The average BMI is approximately 30.66, and the average medical charges are 13,270.42.
+- **T-Test**: The p-value for the t-test was 0, leading us to reject the null hypothesis and conclude that BMI is significantly different from the population mean.
+- **Confidence Interval**: The 95% confidence interval for BMI is between 30.34 and 30.99.
+- **Linear Regression**: The results show a statistically significant positive relationship between BMI and medical charges. A unit increase in BMI is associated with an increase of approximately 393.87 in medical charges.
 
 ## Conclusion
-This analysis highlights the use of statistical methods, such as descriptive statistics, hypothesis testing, and linear regression, to derive meaningful insights from healthcare data. The results confirm that BMI has a significant impact on medical costs, which aligns with existing medical literature that links obesity with higher healthcare expenses. The analysis underscores the importance of monitoring BMI to control healthcare costs, especially for conditions related to obesity.
+The analysis demonstrates that BMI is a significant predictor of medical costs. However, the low R-squared value suggests that other factors also influence medical charges. The dataset provides valuable insights into healthcare costs, particularly in relation to BMI, but further analysis incorporating additional variables may be necessary to fully understand the drivers of medical costs.
+
+## Requirements
+To run the analysis, you'll need the following Python libraries:
+- `numpy`
+- `pandas`
+- `matplotlib`
+- `scipy`
+- `statsmodels`
+
+You can install these using pip:
+```bash
+pip install numpy pandas matplotlib scipy statsmodels
+```
+name :B Maruthi Kumar
+email: maruthikumarbandaru@gmail.com
+linkedin: linkedin.com/in/maruthi-kumar-328537258/
